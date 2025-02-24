@@ -7,32 +7,32 @@ interface Todo {
 }
 
 interface TodoState {
-  todo: Todo[];
+  todos: Todo[];
 }
 
 const initialState: TodoState = {
-  todo: [],
+  todos: [],
 };
 
 const todoSlice = createSlice({
-  name: "todo",
+  name: "todos",
   initialState,
   reducers: {
     addTodo: (state, action: PayloadAction<string>) => {
-      state.todo.push({
+      state.todos.push({
         id: Date.now(),
         text: action.payload,
         completed: false,
       });
     },
     toggleTodo: (state, action: PayloadAction<number>) => {
-      const todo = state.todo.find((t) => t.id === action.payload);
+      const todo = state.todos.find((t) => t.id === action.payload);
       if (todo) {
         todo.completed = !todo.completed;
       }
     },
     removeTodo: (state, action: PayloadAction<number>) => {
-      state.todo.filter((t) => t.id !== action.payload);
+      state.todos = state.todos.filter((t) => t.id !== action.payload);
     },
   },
 });
