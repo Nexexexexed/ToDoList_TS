@@ -8,12 +8,18 @@ interface TodoItemProps {
 
 const TodoItem: React.FC<TodoItemProps> = ({ todo }) => {
   const dispatch = useDispatch();
+
   return (
-    <li>
-      <button onClick={() => dispatch(toggleTodo(todo.id))}>
-        {todo.completed ? "✅" : "⏳"}
-      </button>
-      {todo.text}
+    <li className="task">
+      <input
+        type="radio"
+        checked={todo.completed}
+        onChange={() => dispatch(toggleTodo(todo.id))}
+        className={`input_done ${todo.completed ? "check_done" : ""}`}
+      />
+      <span className={todo.completed ? "done done_text" : ""}>
+        {todo.text}
+      </span>
     </li>
   );
 };

@@ -5,24 +5,24 @@ interface TodoFilterProps {
 
 const TodoFilter: React.FC<TodoFilterProps> = ({ filter, setFilter }) => {
   return (
-    <div>
+    <div className="filters">
       <button
         onClick={() => setFilter("all")}
-        className={filter === "all" ? "active" : ""}
+        className={filter === "all" ? "active filter" : "filter"}
       >
-        Все
+        All
       </button>
       <button
         onClick={() => setFilter("notcompleted")}
-        className={filter === "notcompleted" ? "active" : ""}
+        className={filter === "notcompleted" ? "active filter" : "filter"}
       >
-        Активные
+        Active
       </button>
       <button
         onClick={() => setFilter("completed")}
-        className={filter === "completed" ? "active" : ""}
+        className={filter === "completed" ? "active filter" : "filter"}
       >
-        Завершённые
+        Completed
       </button>
     </div>
   );

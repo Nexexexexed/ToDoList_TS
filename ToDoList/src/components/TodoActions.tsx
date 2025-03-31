@@ -4,9 +4,9 @@ import { removeAllCompleted } from "../redux/todoSlice";
 const TodoActions: React.FC = () => {
   const dispatch = useDispatch();
   return (
-    <div>
+    <div className="action">
       <button onClick={() => dispatch(removeAllCompleted())}>
-        Удалить все завершенные
+        Clear completed
       </button>
     </div>
   );
