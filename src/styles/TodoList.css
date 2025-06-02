@@ -30,6 +30,14 @@ li {
   color: rgb(98, 87, 87);
 }
 
+.adding_button {
+  cursor: pointer;
+  background-color: rgb(180, 160, 160);
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+}
+
 .main_block {
   background-color: white;
   min-width: 30%;
@@ -66,6 +74,7 @@ li {
   padding: 10px 0 10px 10px;
   max-height: 100%;
   color: rgb(98, 87, 87);
+  border-bottom: 1px solid #d6d6d6;
 }
 
 .task:hover {
@@ -98,6 +107,7 @@ li {
 .action {
   font-size: 18px;
   color: #bbbbbb;
+  cursor: pointer;
 }
 
 .filter {

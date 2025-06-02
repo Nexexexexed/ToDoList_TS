@@ -45,6 +45,9 @@ const TodoList: React.FC = () => {
             placeholder="What needs to be done ?"
             className="input_text"
           ></input>
+          <button className="adding_button" onClick={() => handleAddTodo()}>
+            Add
+          </button>
         </div>
         <ul className="tasks">
           {filteredTodos.map((todo) => (
